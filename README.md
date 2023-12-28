@@ -47,8 +47,6 @@ The project uses a remote backend for state management. The `aws-backend/main.tf
 
 This project demonstrates the use of Terraform to manage AWS infrastructure efficiently. It covers essential concepts such as remote backends, EC2 instances, S3, RDS, ALB, and Route 53.
 
-Feel free to explore the code, modify configurations, and adapt it to your specific needs. For a step-by-step guide, refer to the project documentation on GitHub.
-
 ## Resources
 
 - [Terraform Documentation](https://www.terraform.io/docs/index.html)
