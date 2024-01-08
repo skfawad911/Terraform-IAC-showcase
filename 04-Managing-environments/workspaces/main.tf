@@ -32,7 +32,7 @@ locals {
 }
 
 module "web-app" {
-  source = "/home/champ/Terraform-learning/04-organization-and-modules/web-app modules"
+  source = "/home/champ/Terraform-learning/03-organization-and-modules/web-app modules"
 
   # Input Variables
   bucket_prefix    = "web-app-data-${local.environment_name}"
