@@ -2,10 +2,12 @@
 
 ## Overview
 
-This project showcases the power of Terraform as an Infrastructure as Code (IaC) tool for AWS. It includes the creation of a remote backend using S3 and DynamoDB, EC2 instances, S3 bucket, RDS instance, ALB, and Route 53, all within a VPC.
+This Terraform project showcases the power of Infrastructure as Code (IaC) for AWS, covering various aspects. Each section corresponds to a specific topic, offering insights and organized configurations.
 
 ## Architecture
-![](01-basics/web-app/architecture.png)
+![Infrastructure Architecture Diagram](01-basics/web-app/architecture.png)
+
+*This is the Architecture that i will be using for this project*
 
 ## Prerequisites
 
@@ -14,11 +16,16 @@ Before deploying the infrastructure, ensure that you have:
 - AWS CLI configured with necessary permissions.
 - Terraform installed on your local machine.
 
-## Terraform Remote Backend
+## Directory Structure
 
-The project uses a remote backend for state management. The `aws-backend/main.tf` file includes the configuration for an S3 bucket and DynamoDB table for state locking.
+- **`01-basics/aws-backend/main.tf`**: Remote backend configuration for S3 and DynamoDB.
+- **`01-basics/web-app/main.tf`**: Terraform configuration for EC2 instances, S3 bucket, RDS, ALB, and Route 53.
+- **`02-variables/`**: Configuration files for handling Terraform variables.
+- **`03-organization-and-modules/consul/main.tf`**: Terraform configuration for Consul.
+- **`03-organization-and-modules/web-app/`**: Terraform configuration for the web app module.
+- **`04-managing-environments/workspaces/main.tf`**: Terraform configuration for managing environments using workspaces.
 
-## Infrastructure Deployment
+## Usage
 
 1. **Initialize Terraform:**
 
@@ -38,14 +45,9 @@ The project uses a remote backend for state management. The `aws-backend/main.tf
     terraform apply
     ```
 
-## Directory Structure
-
-- **`/aws-backend/main.tf`**: Initial Terraform configuration for setting up a remote backend.
-- **`web-app/main.tf`**: Main Terraform configuration for creating EC2 instances, S3 bucket, RDS, ALB, and Route 53.
-
 ## Conclusion
 
-This project demonstrates the use of Terraform to manage AWS infrastructure efficiently. It covers essential concepts such as remote backends, EC2 instances, S3, RDS, ALB, and Route 53.
+This project demonstrates the use of Terraform to manage AWS infrastructure efficiently. It covers essential concepts such as remote backends, variables, modules, and environment management.
 
 ## Resources
 
